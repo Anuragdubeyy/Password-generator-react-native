@@ -21,14 +21,25 @@ export default function App() {
     //
   };
   const createPassword = (characters: string, passwordLength: number) => {
-    //
+    let result = '';
+    for (let i = 0; i < passwordLength; i++) {
+      const characterIndex = Math.round(Math.random() * characters.length);
+      result += characters.charAt(characterIndex);
+    }
+    return result;
   };
+
+  const resetPassword = (characters: string, passwordLength: number) => {};
 
   return (
     <View>
-      <Text>App</Text>
+      <Text style={styles.headingText}>App</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  headingText: {
+    fontSize: 24,
+  },
+});
