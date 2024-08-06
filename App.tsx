@@ -71,6 +71,7 @@ export default function App() {
 
   return (
     <ScrollView keyboardShouldPersistTaps="handled">
+      <Text style={styles.headingText}>Password Generator</Text>
       <SafeAreaView style={styles.appContainer}>
         <View style={styles.formContainer}>
           <Formik
@@ -177,6 +178,7 @@ export default function App() {
           <View style={[styles.card, styles.cardElevated]}>
             <Text style={styles.subTitle}>Result: </Text>
             <Text style={styles.description}>Long Press to copy</Text>
+            
             <Text selectable={true} style={styles.generatedPassword}>
               {' '}
               {password}
@@ -191,6 +193,8 @@ export default function App() {
 const styles = StyleSheet.create({
   headingText: {
     fontSize: 24,
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   appContainer: {
     flex: 1,
